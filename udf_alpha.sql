@@ -2,11 +2,11 @@
 -- and replaces them with spaces (' ').
 
 DROP FUNCTION udf_alpha;
-CREATE FUNCTION udf_alpha ( iv_string NVARCHAR(20) )
-RETURNS rv_string NVARCHAR(20)
+CREATE FUNCTION udf_alpha ( iv_string NVARCHAR(1000) )
+RETURNS rv_string NVARCHAR(1000)
 AS BEGIN
 
-    DECLARE lv_string NVARCHAR(20);
+    DECLARE lv_string NVARCHAR(1000);
     DECLARE lv_counter INT = 1;
     DECLARE lv_char NVARCHAR(1);
     DECLARE lv_length_string INT;
